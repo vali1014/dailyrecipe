@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
+  <meta charset="iso-8859-1">
 
   <title><?= $ablakcim['cim'] ?></title>
   <link rel="stylesheet" href="./css/stilus.css" type="text/css"/>
