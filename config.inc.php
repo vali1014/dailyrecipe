@@ -35,3 +35,9 @@ $subpages = array(
 );
 
 $hiba_oldal = array ('fajl' => 'error', 'szoveg' => 'A keresett oldal nem található!');
+
+$kepek_mappa = './images/galeria/';
+$kep_tipusok = array ('.jpg', '.png');
+$kep_datum_formatum = "Y.m.d.";
+$kep_media_tipusok = array('image/jpeg', 'image/png');
+$kep_max_meret = 500*1024;
