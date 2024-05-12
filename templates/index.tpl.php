@@ -30,7 +30,7 @@
 
 <body>
 <header>
-  <img src="./images/<?= $fejlec['kepforras'] ?>" alt="<?= $fejlec['kepalt'] ?>" onclick="document.location.href='/dailyrecipe/'" >
+  <img src="./images/<?= $fejlec['kepforras'] ?>" alt="<?= $fejlec['kepalt'] ?>" onclick="document.location.href='/git/dailyrecipe/'" >
 
   <h1><?= $fejlec['cim'] ?></h1>
     <?php if (isset($_SESSION['login'])) { ?>

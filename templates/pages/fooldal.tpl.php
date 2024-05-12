@@ -3,7 +3,7 @@
   <h2>Szia kedves <?= isset($_SESSION['login']) ? $_SESSION['csn'] . ' ' . $_SESSION['un'] : 'Látogató' ?>!</h2>
   
   <p>
-    Ezen az oldalon összegyűjtöttünk pár receptet Nektek ☺️ .<br/>
+    Ezen az oldalon összegyűjtöttünk pár receptet Neked ☺️ .<br/>
     Az általunk használt oldalak:<br/>
     <a href="https://www.nosalty.hu/" target="_blank">Nosalty</a><br/>
     <a href="https://www.mindmegette.hu/" target="_blank">Mindmegette</a><br/>
