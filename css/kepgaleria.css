@@ -5,18 +5,18 @@
 .accordion {
     width: 100%;
     margin-bottom: 1em;
+}
 
-    .accordion-item, .form-control, :not(.accordion-button[aria-expanded="true"]) {
-        background-color: transparent !important;
-    }
+.accordion .accordion-item, .accordion .form-control, .accordion :not(.accordion-button[aria-expanded="true"]) {
+    background-color: transparent !important;
 }
 
 form {
     font-size: 0.875em !important;
+}
 
-    input[type="submit"] {
-        font-size: 0.875em !important;
-    }
+form input[type="submit"] {
+    font-size: 0.875em !important;
 }
 
 #galeria {

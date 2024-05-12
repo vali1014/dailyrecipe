@@ -1,8 +1,8 @@
 form {
     text-align: start;
     margin-bottom: 1em;
+}
 
-    input{
-        float: right;
-    }
+form input {
+    float: right;
 }
