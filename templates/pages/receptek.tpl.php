@@ -1,30 +1,28 @@
-<link rel="stylesheet" href="./css/stilus.css" type="text/css"/>
-<script type="text/javascript" src="recipes_current_content.js"></script>
-<!-- listával -->
-<div id="mealtypes" style="text-align: center">
-  <nav>
-    <ul>
-        <?php foreach ($subpages as $url => $oldal) { ?>
-            <li>
-                <a href='./templates/pages/<?=$url?>.tpl.php' > <?= $oldal['szoveg'] ?> </a>
-            </li>
-        <?php } ?>
+<div id="mealtypes">
+    <ul class="nav nav-tabs">
+        <?php
+        $i = 0;
+        foreach ($subpages as $url => $oldal) { ?>
+          <li class="nav-item">
+            <a class="nav-link <?= $i == 0 ? 'active' : ''?>" href="#" data-bs-toggle="tab" role="tab"
+               data-bs-target="<?= '#' . $url ?>" aria-selected="<?= $i == 0 ?>"><?= $oldal['szoveg'] ?></a>
+          </li>
+            <?php
+            $i++;
+        }
+        ?>
     </ul>
-  </nav>
-<!-- itt lenne a tartalom -->
-  <?php foreach ($subpages as $url => $oldal) { ?>
-    <div>
-        <?php include_once "./templates/pages/" . $url . ".tpl.php"; ?>
-    </div>
-  <?php } ?>
-</div>
-<!-- buttonokkal -->
-<div id="mealtypes" style="text-align: center">
-  <nav>
-    <ul>
-        <?php foreach ($subpages as $url => $oldal) { ?>
-            <button onclick="document.location.href='./templates/pages/<?=$url?>.tpl.php'"> <?= $oldal['szoveg'] ?> </button>
-        <?php } ?>
-    </ul>
-  </nav>
+
+  <div class="tab-content">
+      <?php
+      $i = 0;
+      foreach ($subpages as $url => $oldal) { ?>
+        <div class="tab-pane fade <?= $i == 0 ? 'show active' : ''?>" role="tabpanel" id="<?= $url ?>">
+            <?php include_once "./templates/pages/" . $url . ".tpl.php"; ?>
+        </div>
+          <?php
+          $i++;
+      }
+      ?>
   </div>
+</div>
