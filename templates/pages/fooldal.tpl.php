@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./css/stilus.css" type="text/css"/>
 <div id="content">
-  <h2>Szia Kedves Látogató!</h2>      
+  <h2>Szia kedves <?= isset($_SESSION['login']) ? $_SESSION['csn'] . ' ' . $_SESSION['un'] : 'Látogató' ?>!</h2>
   
   <p>
     Ezen az oldalon összegyűjtöttünk pár receptet Nektek ☺️ .<br/>

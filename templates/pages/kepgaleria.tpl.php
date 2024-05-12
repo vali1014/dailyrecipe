@@ -1,3 +1,5 @@
+<h2>Képgaléria</h2>
+
 <?php
 include 'config.inc.php';
 $uzenet = array();
@@ -26,21 +28,6 @@ if (isset($_POST['feltoltes'])) {
 }
 ?>
 
-<style type="text/css">
-    div#galeria {
-        margin: 0 auto;
-        width: 610px;
-    }
-
-    div.kep {
-        display: inline-block;
-    }
-
-    div.kep img {
-        width: 200px;
-    }
-</style>
-
 <?php
 // képek beolvasása
 $kepek = array();
@@ -66,20 +53,32 @@ if (!empty($uzenet)) {
 ?>
 
 <?php if(isset($_SESSION['login'])) { ?>
-  <h1>Feltöltés a galériába:</h1>
+    <div id="uploadPicContainer" class="accordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="uploadAccordionHeading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#uploadAccordion" aria-expanded="true" aria-controls="uploadAccordion">
 
-  <form action="?oldal=kepek" method="post" enctype="multipart/form-data">
-  <input type="hidden" name="max_file_size" value="110000">
-  <label>Fájlok:
-    <input type="file" name="fajlok[]" accept="image/png, image/jpeg" multiple required>
-  </label>
-  <input type="submit" name="feltoltes">
-</form>
+            <i class="bi bi-cloud-arrow-up"></i>Feltöltés a galériába
+          </button>
+        </h3>
+
+        <div id="uploadAccordion" class="accordion-collapse collapse show"
+             aria-labelledby="uploadAccordionHeading" data-bs-parent="uploadPicContainer">
+          <form action="?oldal=kepek" method="post" enctype="multipart/form-data" class="accordion-body">
+            <input type="hidden" name="max_file_size" value="110000">
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Fájlok</label>
+              <input class="form-control form-control-sm" type="file" name="fajlok[]"  id="formFileMultiple" multiple required>
+            </div>
+            <input type="submit" class="btn btn-outline-secondary" name="feltoltes">
+          </form>
+        </div>
+      </div>
+    </div>
 <?php } ?>
 
 <div id="galeria">
-
-  <h1>KÉPGALÉRIA</h1>
     <?php
     arsort($kepek);
 
@@ -87,7 +86,7 @@ if (!empty($uzenet)) {
         ?>
       <div class="kep">
         <a href="<?= $kepek_mappa . $fajl ?>">
-          <img src="<?= $kepek_mappa . $fajl ?>">
+          <img src="<?= $kepek_mappa . $fajl ?>" alt="<?= $fajl ?>">
         </a>
         <p>Név: <?= $fajl; ?></p>
         <p>Dátum: <?= date($kep_datum_formatum, $datum); ?></p>

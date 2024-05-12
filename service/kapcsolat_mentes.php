@@ -1,6 +1,6 @@
 <?php
 // Szerver oldali ellenőrzés
-$name_regex = '/^[A-Za-z]{8,20}$/';
+$name_regex = '/^([A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű\s]{8,20})$/';
 $is_correct = true;
 
 $kimenet = "Név: {$_POST['nev']}";
@@ -28,7 +28,7 @@ $kimenet .= "<br>";
 // mentés db-be
 if ($is_correct) {
     try {
-        $db = new PDO('mysql:host=localhost;dbname=dailyrecipe', 'root', '',
+        $db = new PDO('mysql:host=localhost:3306;dbname=dailyrecipe', 'root', '',
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         $db->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
