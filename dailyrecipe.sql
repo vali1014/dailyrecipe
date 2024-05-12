@@ -21,18 +21,24 @@ SET time_zone = "+00:00";
 -- Adatbázis: `dailyrecipe`
 --
 
+CREATE DATABASE IF NOT EXISTS `dailyrecipe`
+    CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+
+USE `dailyrecipe`;
+
 -- --------------------------------------------------------
 
 --
 -- Tábla szerkezet ehhez a táblához `contact`
 --
 
-CREATE TABLE `contact` (
+CREATE TABLE IF NOT EXISTS `contact` (
   `id` int(11) NOT NULL,
-  `nev` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `bejelentkezett_e` varchar(20) NOT NULL,
-  `content` varchar(100) NOT NULL
+  `content` varchar(255) NOT NULL,
+  `datum` DATETIME DEFAULT NOW() NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -41,26 +47,26 @@ CREATE TABLE `contact` (
 -- Tábla szerkezet ehhez a táblához `felhasznalok`
 --
 
-CREATE TABLE `felhasznalok` (
+CREATE TABLE IF NOT EXISTS `felhasznalok` (
   `id` int(11) NOT NULL,
   `csaladi_nev` varchar(30) NOT NULL,
   `utonev` varchar(30) NOT NULL,
   `bejelentkezes` varchar(20) NOT NULL,
-  `jelszo` varchar(20) NOT NULL
+  `jelszo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
--- Indexek a kiírt táblákhoz
+-- Elsődleges kulcsok a kiírt táblákhoz
 --
 
 --
--- A tábla indexei `contact`
+-- A tábla elsődleges kulcsa `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `felhasznalok`
+-- A tábla elsődleges kulcsa `felhasznalok`
 --
 ALTER TABLE `felhasznalok`
   ADD PRIMARY KEY (`id`);
