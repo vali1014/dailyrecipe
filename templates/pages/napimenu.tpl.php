@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<script type="text/javascript" src="random.js"></script>
 <h2>A mai nap:
     <?php $fmt = datefmt_create(
             "hu_HU",
@@ -13,17 +14,6 @@
     ?>
 </h2>
 
-<h3>
-  A mai ajánlott előétel: <br/>
-
-</h3>
-
-<h3>
-  A mai ajánlott főétel: <br/>
-
-</h3>
-
-<h3>
-  A mai ajánlott desszert: <br/>
-
-</h3>
+<?php
+include "service/random_valasztas.php";
+?>

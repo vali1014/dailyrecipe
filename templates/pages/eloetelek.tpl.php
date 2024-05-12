@@ -4,18 +4,18 @@
 
 <div class="eloetelek-container">
   <a href="https://www.mindmegette.hu/tojaskrem-iv.recept/">
-    <img src="./images/recipe/eloetelek/tojaskrem.jpg" alt="kep">
+    <img src="./recipe/eloetelek/tojaskrem.jpg" alt="kep">
   </a>
   <a>
-    <iframe src="./images/recipe/eloetelek/tojaskrem.txt" width="400" height="370" 
+    <iframe src="./recipe/eloetelek/tojaskrem.txt" width="400" height="370"
     &language=hu frameborder="0" marginheight="0px" marginwidth="0px"></iframe>
   </a>
 
   <a href="https://www.mindmegette.hu/egyszeru-gyumolcsleves.recept/">
-    <img src="./images/recipe/eloetelek/gyumolcsleves.jpg" alt="kep">
+    <img src="./recipe/eloetelek/gyumolcsleves.jpg" alt="kep">
   </a>
   <a>
-    <iframe src="./images/recipe/eloetelek/gyumolcsleves.txt" width="400" height="370" 
+    <iframe src="./recipe/eloetelek/gyumolcsleves.txt" width="400" height="370"
     &language=hu frameborder="0" marginheight="0px" marginwidth="0px"></iframe>
   </a>
 </div>
