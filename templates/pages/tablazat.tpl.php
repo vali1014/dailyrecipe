@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./css/tablazat.css" type="text/css"/>
 <table>
-    <caption>TÁBLÁZAT</caption>
+  <h2>Vélemények</h2>
 
     <thead>
       <tr>
