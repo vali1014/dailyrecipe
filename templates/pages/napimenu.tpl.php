@@ -1,6 +1,17 @@
 <meta charset="utf-8">
-<h2>A mai nap: <?php echo date("Y. m. d.");?> 
-(<?php setlocale(LC_ALL,'hungarian'); echo strftime("%A", time()); ?>)</h2>
+<h2>A mai nap:
+    <?php $fmt = datefmt_create(
+            "hu_HU",
+            IntlDateFormatter::FULL,
+            IntlDateFormatter::FULL,
+            "Europe/Budapest",
+            IntlDateFormatter::GREGORIAN,
+            "yyyy. MM. dd. (cccc)"
+    );
+
+    echo datefmt_format($fmt, time());
+    ?>
+</h2>
 
 <h3>
   A mai ajánlott előétel: <br/>
