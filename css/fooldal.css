@@ -1,0 +1,8 @@
+div#content img, div#content video {
+    float: right;
+    width: 15em;
+    height: auto;
+    margin: 0 15px 15px;
+    padding: 3px;
+    border: 3px solid #f7f197;
+}

@@ -1,0 +1,29 @@
+.nav {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.nav, .nav-tabs .nav-link:hover, :not(.nav-tabs .nav-link:hover) {
+    border: 0;
+}
+
+.nav-link {
+    color: #32a852 !important;
+}
+
+.nav-link.active {
+    background-color: transparent !important;
+    border-bottom: 1px solid #32a852 !important;
+}
+
+.eloetelek-container, .foetelek-container, .desszertek-container {
+    display: flex;
+    column-gap: 2em;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 25rem;
+    margin: 10px;
+}

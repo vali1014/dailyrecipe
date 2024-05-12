@@ -1,78 +1,60 @@
 header {
-    border-radius: 10px;
+    border-radius: 1em;
     background-color: #32a852;
-    padding: 10px;
-    margin: 10px;
+    padding: 1em 1.5em;
+    margin: 1em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
 }
 
 header img {
-    float: left;
-    margin: 20px 10px 0 10px;
-    height: 60px;}
+    max-height: 100%;
+    width: auto;
+}
 
 div#wrapper {
-    margin: 10px;
+    margin: 1em;
+    background-color: #d9e2fa;
 }
 
-aside {
-    display: contents;
-    vertical-align: middle;
-    position: absolute;
-    width: fit-content;
-    margin: 10px;
-}
-
-nav {
-    margin: 0 10px 0 0;
-    top: 0;
-    background-color: #acc6ec;
-    transition: height 1s ease-in-out;
-    justify-content: center;
-}
 nav#menu {
-    width: auto;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
     display: flex;
-    overflow: hidden;
+    background-color: #acc6ec;
+    justify-content: center;
     align-items: center;
 }
 
-ul {
+nav#menu ul {
     display: flex;
-}
-
-nav ul {
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
-    padding: 15px 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    column-gap: 1.5em;
 }
 
-nav ul li {
-    padding: 0 15px;;
-}
-
-nav ul li.active {
+nav#menu ul li.active {
     border-bottom: 3px solid #32a852;
 }
 
-nav ul a {
+nav#menu ul a, nav#menu ul a:hover {
     text-decoration: none;
     color: #32a852;
 }
 
 div#content {
-    background-color: #d9e2fa;
-    padding: 10px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px 50px;
     text-align: center;
-}
-
-div#content img, div#content video {
-    width: 20em;
-    height: auto;
-    margin: 0 15px 15px;
-    padding: 3px;
-    border: 3px solid #f7f197;
+    align-items: center;
 }
 
 footer {
@@ -89,30 +71,6 @@ footer {
     color: #f00;
 }
 
-label {
-    display: block;
-    margin: 10px 0;
-}
-
-input:not(#kuld) {
-    width: 200px;
-}
-
-legend {
-    font-weight: bold;
-    font-size: x-large;
-}
-
-h2 {
-   margin: 60px; 
-}
-
 h3 {
     color: #4e524f;
-}
-
-iframe {
-    margin: 20px;
-    padding: 3px;
-    border: 3px solid #f7f197;
 }

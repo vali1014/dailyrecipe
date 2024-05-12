@@ -1,0 +1,10 @@
+.belepes-oldal-content {
+    display: flex;
+    width: 100%;
+    column-gap: 5em;
+    justify-content: center;
+}
+
+.bejelentkezes-box, .regisztracios-box {
+    width: 40%;
+}
