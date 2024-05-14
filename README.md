@@ -3,7 +3,7 @@
 -	Az oldal célja: L-LA04 WEB-programozás I. [L-K-GINFBAL-WEBPROG1-1-LA04] beadandó
 -	Hallgatók: Dunai Valéria és Móricz Noémi
 -	Tematika: receptgyűjtemény
--	Tárhely:  
+-	Tárhely:  http://dailyrecipe.nhely.hu/
 - GitHub: https://github.com/vali1014/dailyrecipe
 
 ### Az oldal használati lehetőségei
