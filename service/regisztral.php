@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['vezeteknev']) && isset($_POST['utonev'])) {
     try {
-        $db = new PDO('mysql:host=ftp.nethely.hu;dbname=dailyrecipe', 'root', '',
+        $db = new PDO('mysql:host=localhost;dbname=dailyrecipe', 'root', '',
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         $db->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 

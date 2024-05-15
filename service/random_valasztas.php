@@ -32,18 +32,14 @@ include "./service/recursive_copy.php";
     recurseCopy('./recipe/desszertek/'.$randomdesszert,'./napimenu/'.$ma.'/desszert' );
   }
 
-  $randomeloetelfiles = scandir($file_path_eloetel);
-  array_splice($randomeloetelfiles, 0, 2);
-  $randomeloetelnev = preg_grep('/.jpg/', $randomeloetelfiles)[0];
-  $randomeloetelnev = substr($randomeloetelnev, 0, -4);
+  $randomeloetelnev = getRandomEtelnev($file_path_eloetel);
+  $randomfoetelnev = getRandomEtelnev($file_path_foetel);
+  $randomdesszertnev = getRandomEtelnev($file_path_desszert);
 
-  $randomfoetelfiles = scandir($file_path_foetel);
-  array_splice($randomfoetelfiles, 0, 2);
-  $randomfoetelnev = preg_grep('/.jpg/', $randomfoetelfiles)[0];
-  $randomfoetelnev = substr($randomfoetelnev, 0, -4);
-
-  $randomdesszertfiles = scandir($file_path_desszert);
-  array_splice($randomdesszertfiles, 0, 2);
-  $randomdesszertnev = preg_grep('/.jpg/', $randomdesszertfiles)[0];
-  $randomdesszertnev = substr($randomdesszertnev, 0, -4);
+  function getRandomEtelnev($filepath): string {
+    $randometelfiles = scandir($filepath);
+    array_splice($randometelfiles, 0, 2);
+    $randometelnev = array_values(preg_grep('/.jpg/', $randometelfiles))[0];
+    return substr($randometelnev, 0, -4);
+  }
 ?>
